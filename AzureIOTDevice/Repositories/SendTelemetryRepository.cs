@@ -14,7 +14,7 @@ namespace AzureIOT.Repositories
         public static RegistryManager? registryManager;
         public static DeviceClient? client;
         private static string connStringIotHub = "HostName=ashuiotdevicehub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=RG7hc7hCrJPY+Ohz0X/Z2Ejb3/wEphz9HGJ5cXcCfgQ=";
-        public static string connStringDevice = "HostName=iothub-ahs230127.azure-devices.net;DeviceId=sensor-th-0001;SharedAccessKey=d8hHLBf/6eIKWTbi2geOFipCqFvA019MHNRThDHo1TA=";
+        public static string connStringDevice = "HostName=ashuiotdevicehub.azure-devices.net;DeviceId=devicedemo1;SharedAccessKey=DKnECcocGX5dyTm98KoxkKzVVzDF/PkvcphYSFDL8SU=";
 
         public static async Task SendMessage(string deviceId)
         {
