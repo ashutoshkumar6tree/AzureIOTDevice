@@ -10,10 +10,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["AzureIOTDevice/AzureIOTDevice.csproj", "AzureIOTDevice/"]
-RUN dotnet restore "AzureIOTDevice/AzureIOTDevice.csproj"
+COPY ["AzureIOTDevice.csproj", "."]
+RUN dotnet restore "./AzureIOTDevice.csproj"
 COPY . .
-WORKDIR "/src/AzureIOTDevice"
+WORKDIR "/src/."
 RUN dotnet build "AzureIOTDevice.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -1,19 +1,19 @@
 apiversion: apps/v1
 kind: Deployment
 metadata:
-  name: iotdeviceapi
+  name: ashukubercluster
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: iotdeviceapi
+      app: ashukubercluster
   template:
     metadata:
       labels:
-        app: iotdeviceapi
+        app: ashukubercluster
     spec:
       containers:
-      - name: iotdeviceapi
-        image: iotdeviceapiacr045.azurecr.io/iotdeviceapi
+      - name: ashukubercluster
+        image: ashuregistry.azurecr.io/ashukubercluster
         ports:
         - containerPort: 80
